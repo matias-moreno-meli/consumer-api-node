@@ -1,0 +1,51 @@
+{
+  "author": {
+    "name": "Matias",
+    "lastname": "Moreno"
+  },
+  "categories": [
+    "Autos, Motos y Otros",
+    "Autos y Camionetas"
+  ],
+  "items": [
+    {
+      "id": "MLA782342706",
+      "title": "Fiat Uno 1.3 Mpi Nafta",
+      "price": {
+        "currency": "ARS",
+        "amount": 115000,
+        "decimals": "00"
+      },
+      "picture": "http://mla-s1-p.mlstatic.com/900818-MLA30000799651_042019-I.jpg",
+      "condition": "Usado",
+      "free_shipping": false,
+      "city_name": "La Plata"
+    },
+    {
+      "id": "MLA783520030",
+      "title": "Fiat Uno 1.3 Mpi",
+      "price": {
+        "currency": "ARS",
+        "amount": 84000,
+        "decimals": "00"
+      },
+      "picture": "http://mla-s1-p.mlstatic.com/909958-MLA30103441044_042019-I.jpg",
+      "condition": "Usado",
+      "free_shipping": false,
+      "city_name": "Vicente López"
+    },
+    {
+      "id": "MLA781640490",
+      "title": "Fiat Uno 1.3 S Mpi",
+      "price": {
+        "currency": "ARS",
+        "amount": 113000,
+        "decimals": "00"
+      },
+      "picture": "http://mla-s1-p.mlstatic.com/672544-MLA29955919580_042019-I.jpg",
+      "condition": "Usado",
+      "free_shipping": false,
+      "city_name": "Bahía Blanca"
+    }
+  ]
+}
