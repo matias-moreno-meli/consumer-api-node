@@ -1,62 +1,89 @@
 <div class="container-fluid background-color d-flex justify-content-center">
   <div class="col-10">
-    <div class="row">
+    <div class="row ">
       <div class="col-1 d-flex align-items-center justify-content-right">
         <a routerLink="/">
           <img src="././assets/image/Logo_ML.png">
         </a>
       </div>
-      <div class="col-11">
+
+    </div>
+  </div>
+</div>
+<div
+  style="height: 450px; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(&quot;https://http2.mlstatic.com/resources/frontend/classifieds-homes-premium/states/0.0.3/ar/ar-c--xl.jpg&quot;);"
+  class="container-fluid  d-flex align-items-center justify-content-center">
+  <div class="col-10">
+    <div class="row d-flex justify-content-center">
+      <div style="background-color: rgba(0,0,0,.4);" class="col-11 mb-3">
         <div class="my-2">
-          <div class="input-group">
-            <input type="text" class="form-control border-1 m-2" placeholder="site_id"
-                   aria-label="site_id" aria-describedby="basic-addon2"
-                   [(ngModel)]="siteID" [ngModelOptions]="{standalone: true}">
-            <input type="text" class="form-control border-1 m-2" placeholder="payment_method_id"
-                   aria-label="payment_method_id" aria-describedby="basic-addon2"
-                   [(ngModel)]="paymentMethodId" [ngModelOptions]="{standalone: true}">
-            <input type="text" class="form-control border-1 m-2"
-                   placeholder="lat"
-                   aria-label="lat"
-                   aria-describedby="basic-addon2"
-                   [(ngModel)]="nearTo.lat" [ngModelOptions]="{standalone: true}">
-            <input type="text" class="form-control border-1 m-2"
-                   placeholder="lon"
-                   aria-label="lon"
-                   aria-describedby="basic-addon2"
-                   [(ngModel)]="nearTo.lon" [ngModelOptions]="{standalone: true}">
-            <input type="text" class="form-control border-1 m-2"
-                   placeholder="radius"
-                   aria-label="radius"
-                   aria-describedby="basic-addon2"
-                   [(ngModel)]="nearTo.radius" [ngModelOptions]="{standalone: true}">
-            <input type="text" class="form-control border-1 m-2"
-                   placeholder="limit"
-                   aria-label="limit"
-                   aria-describedby="basic-addon2"
-                   [(ngModel)]="limit" [ngModelOptions]="{standalone: true}">
-            <input type="text" class="form-control border-1 m-2"
-                   placeholder="offset"
-                   aria-label="offset"
-                   aria-describedby="basic-addon2"
-                   [(ngModel)]="offset" [ngModelOptions]="{standalone: true}">
-            <input type="text" class="form-control border-1 m-2"
-                   placeholder="type"
-                   aria-label="type"
-                   aria-describedby="basic-addon2"
-                   [(ngModel)]="orderBy.type" [ngModelOptions]="{standalone: true}">
-            <input type="text" class="form-control border-1 m-2"
-                   placeholder="order"
-                   aria-label="order"
-                   aria-describedby="basic-addon2"
-                   [(ngModel)]="orderBy.order" [ngModelOptions]="{standalone: true}">
-            <div class="input-group-append">
-              <button (click)="searchForItems()" class="btn gris border-0" type="button">
-                <img class="size-find-button" src="././assets/image/ic_Search@2x.png.png"/>
-              </button>
+          <div class="row">
+            <div class="input-group">
+              <input type="text" class="form-control border-1 m-2" placeholder="site_id"
+                     aria-label="site_id" aria-describedby="basic-addon2"
+                     [(ngModel)]="siteID" [ngModelOptions]="{standalone: true}">
+              <input type="text" class="form-control border-1 m-2" placeholder="payment_method_id"
+                     aria-label="payment_method_id" aria-describedby="basic-addon2"
+                     [(ngModel)]="paymentMethodId" [ngModelOptions]="{standalone: true}">
             </div>
           </div>
+          <div class="row">
+            <div class="input-group">
+              <input type="text" class="form-control border-1 m-2"
+                     placeholder="lat"
+                     aria-label="lat"
+                     aria-describedby="basic-addon2"
+                     [(ngModel)]="nearTo.lat" [ngModelOptions]="{standalone: true}">
+              <input type="text" class="form-control border-1 m-2"
+                     placeholder="lon"
+                     aria-label="lon"
+                     aria-describedby="basic-addon2"
+                     [(ngModel)]="nearTo.lon" [ngModelOptions]="{standalone: true}">
+              <input type="text" class="form-control border-1 m-2"
+                     placeholder="radius"
+                     aria-label="radius"
+                     aria-describedby="basic-addon2"
+                     [(ngModel)]="nearTo.radius" [ngModelOptions]="{standalone: true}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group">
+              <input type="text" class="form-control border-1 m-2"
+                     placeholder="limit"
+                     aria-label="limit"
+                     aria-describedby="basic-addon2"
+                     [(ngModel)]="limit" [ngModelOptions]="{standalone: true}">
+              <input type="text" class="form-control border-1 m-2"
+                     placeholder="offset"
+                     aria-label="offset"
+                     aria-describedby="basic-addon2"
+                     [(ngModel)]="offset" [ngModelOptions]="{standalone: true}">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-group">
+              <input type="text" class="form-control border-1 m-2"
+                     placeholder="type"
+                     aria-label="type"
+                     aria-describedby="basic-addon2"
+                     [(ngModel)]="orderBy.type" [ngModelOptions]="{standalone: true}">
+              <input type="text" class="form-control border-1 m-2"
+                     placeholder="order"
+                     aria-label="order"
+                     aria-describedby="basic-addon2"
+                     [(ngModel)]="orderBy.order" [ngModelOptions]="{standalone: true}">
+            </div>
+          </div>
+
         </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-3">
+        <button (click)="searchForItems()" class="btn gris border-0" type="button">
+          Buscar
+        </button>
       </div>
     </div>
   </div>

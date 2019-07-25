@@ -3,7 +3,9 @@
 }
 
 .gris {
-  background-color: #EEEEEE;
+  width: 100%;
+  background-color: #3e52a1;
+  color: white;
 }
 
 .size-find-button {
