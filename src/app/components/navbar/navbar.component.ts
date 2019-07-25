@@ -48,4 +48,8 @@ export class NavbarComponent implements OnInit {
     // }
   }
 
+  getAgencies(): void {
+    this.router.navigate(['./agencies']);
+  }
+
 }

@@ -78,4 +78,34 @@ export class AgenciesService {
         ));
   }
 
+  getAgencies(): Observable<Agency[]> {
+
+    let url = `${this.baseUrl}agencies`;
+
+
+    // const httpOptions = {headers: new HttpHeaders().set('Accept', 'application/json')};
+
+    return this.http.get<Agency[]>(url)
+      .pipe(map(response => {
+          if (response) {
+            return response;
+          }
+        }),
+        catchError(
+          err => {
+            switch (err.key) {
+              case 400: {
+                return throwError(new ServiceError('examen-tecnico-api-400', 'Ocurrio un error al intentar consultar la api.'));
+              }
+              case 500: {
+                return throwError(new ServiceError('examen-tecnico-api-500', 'Ocurrió un error en el servidor'));
+              }
+              default: {
+                return throwError(new ServiceError('examen-tecnico-api-generico', 'Ocurrió un error'));
+              }
+            }
+          }
+        ));
+  }
+
 }

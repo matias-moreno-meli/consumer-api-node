@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SitesComponent } from './components/sites/sites.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AgenciesComponent } from './components/agencies/agencies.component';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
@@ -12,6 +13,7 @@ import {FormsModule} from '@angular/forms';
     AppComponent,
     SitesComponent,
     NavbarComponent,
+    AgenciesComponent,
   ],
   imports: [
     BrowserModule,
