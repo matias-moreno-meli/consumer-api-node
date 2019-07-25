@@ -1,18 +1,22 @@
 import {Component, OnInit} from '@angular/core';
 import {SitesService} from '../../services/sites.service';
+import {AgenciesService} from '../../services/agencies.service';
 import {SearchResult} from '../../models/search-result';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, NavigationExtras} from '@angular/router';
+import {Agency} from '../../models/agency';
 
 @Component({
   selector: 'app-item-list',
   templateUrl: './sites.component.html',
   styleUrls: ['./sites.component.css']
 })
+
 export class SitesComponent implements OnInit {
 
   searchResult: SearchResult;
 
   constructor(private sitesService: SitesService,
+              private agenciesService: AgenciesService,
               private route: ActivatedRoute) {
   }
 
@@ -53,6 +57,22 @@ export class SitesComponent implements OnInit {
       order)
       .subscribe(data => {
         this.searchResult = data;
+      });
+  }
+
+  likeAgency(agency: Agency): void {
+
+    this.agenciesService.saveAgency(agency).subscribe(
+      data => {
+
+        console.warn(data);
+      });
+  }
+
+  dislikeAgency(agency: Agency): void {
+
+    this.agenciesService.deleteAgency(agency).subscribe(
+      data => {
 
         console.warn(data);
       });

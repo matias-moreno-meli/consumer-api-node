@@ -5,7 +5,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {SearchResult} from '../models/search-result';
 import {ServiceError} from './service-error';
-import {CategoryRepository} from '../repository/category.repository';
 
 @Injectable({
   providedIn: 'root'

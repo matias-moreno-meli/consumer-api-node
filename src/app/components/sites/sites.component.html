@@ -12,19 +12,22 @@
       <div class="col-4 p-1" *ngFor="let site of searchResult?.results">
         <div class="col col-general">
           <div style="font-size: 10px" class="col text-center mt-1 font-color-negro">id: {{ site?.id }} </div>
-          <div style="font-size: 10px" class="col text-center m-0 font-color-negro">Agency Code: {{ site?.agency_code }} </div>
-          <div style="font-size: 10px" class="col text-center m-0 font-color-negro">Distance: {{ site?.distance }} </div>
+          <div style="font-size: 10px" class="col text-center m-0 font-color-negro">Agency
+            Code: {{ site?.agency_code }} </div>
+          <div style="font-size: 10px" class="col text-center m-0 font-color-negro">
+            Distance: {{ site?.distance }} </div>
           <div style="font-size: 14px" class="text-center font-color-negro my-2">{{ site?.description }} </div>
           <div style="font-size: 12px" class="text-center font-color-negro">{{ site?.address.address_line }} </div>
-          <div style="font-size: 12px" class="text-center font-color-negro">{{ site?.address.city }}, {{ site?.address.country }} </div>
+          <div style="font-size: 12px" class="text-center font-color-negro">{{ site?.address.city }}
+            , {{ site?.address.country }} </div>
           <div class="row d-flex justify-content-center">
             <div class="col-2">
-              <a routerLink="/">
+              <a (click)="likeAgency(site)">
                 <img style="size: 10px" src="././assets/image/like.svg">
               </a>
             </div>
             <div class="col-2">
-              <a routerLink="/">
+              <a (click)="dislikeAgency(site)">
                 <img style="size: 10px" src="././assets/image/dislike.svg">
               </a>
             </div>
