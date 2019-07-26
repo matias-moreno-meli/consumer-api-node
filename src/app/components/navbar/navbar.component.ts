@@ -23,6 +23,11 @@ export class NavbarComponent implements OnInit {
   };
   search = '';
 
+  types = {
+    list: ['address_line', 'agency_code', 'distance'],
+    order: ['asc', 'desc']
+};
+
   constructor(private router: Router) {
   }
 

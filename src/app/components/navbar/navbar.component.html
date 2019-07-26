@@ -14,71 +14,93 @@
   style="height: 450px; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(&quot;https://http2.mlstatic.com/resources/frontend/classifieds-homes-premium/states/0.0.3/ar/ar-c--xl.jpg&quot;);"
   class="container-fluid  d-flex align-items-center justify-content-center">
   <div class="col-10">
-    <div class="row d-flex justify-content-center">
-      <div style="background-color: rgba(0,0,0,.4);" class="col-11 mb-3">
-        <div class="my-2">
-          <div class="row">
-            <div class="input-group">
-              <input type="text" class="form-control border-1 m-2" placeholder="site_id"
-                     aria-label="site_id" aria-describedby="basic-addon2"
-                     [(ngModel)]="siteID" [ngModelOptions]="{standalone: true}">
-              <input type="text" class="form-control border-1 m-2" placeholder="payment_method_id"
-                     aria-label="payment_method_id" aria-describedby="basic-addon2"
-                     [(ngModel)]="paymentMethodId" [ngModelOptions]="{standalone: true}">
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-group">
-              <input type="text" class="form-control border-1 m-2"
-                     placeholder="lat"
-                     aria-label="lat"
-                     aria-describedby="basic-addon2"
-                     [(ngModel)]="nearTo.lat" [ngModelOptions]="{standalone: true}">
-              <input type="text" class="form-control border-1 m-2"
-                     placeholder="lon"
-                     aria-label="lon"
-                     aria-describedby="basic-addon2"
-                     [(ngModel)]="nearTo.lon" [ngModelOptions]="{standalone: true}">
-              <input type="text" class="form-control border-1 m-2"
-                     placeholder="radius"
-                     aria-label="radius"
-                     aria-describedby="basic-addon2"
-                     [(ngModel)]="nearTo.radius" [ngModelOptions]="{standalone: true}">
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-group">
-              <input type="text" class="form-control border-1 m-2"
-                     placeholder="limit"
-                     aria-label="limit"
-                     aria-describedby="basic-addon2"
-                     [(ngModel)]="limit" [ngModelOptions]="{standalone: true}">
-              <input type="text" class="form-control border-1 m-2"
-                     placeholder="offset"
-                     aria-label="offset"
-                     aria-describedby="basic-addon2"
-                     [(ngModel)]="offset" [ngModelOptions]="{standalone: true}">
-            </div>
-          </div>
+    <form>
+      <div class="row d-flex justify-content-center">
+        <div style="background-color: rgba(0,0,0,.4);" class="col-11 mb-3">
+          <div class="my-2">
 
-          <div class="row">
-            <div class="input-group">
-              <input type="text" class="form-control border-1 m-2"
-                     placeholder="type"
-                     aria-label="type"
-                     aria-describedby="basic-addon2"
-                     [(ngModel)]="orderBy.type" [ngModelOptions]="{standalone: true}">
-              <input type="text" class="form-control border-1 m-2"
-                     placeholder="order"
-                     aria-label="order"
-                     aria-describedby="basic-addon2"
-                     [(ngModel)]="orderBy.order" [ngModelOptions]="{standalone: true}">
-            </div>
-          </div>
 
+            <div class="form-row">
+              <div class="form-group col-6">
+                <input id="site_id" type="text" class="form-control" placeholder="site_id"
+                       aria-label="Site_id" aria-describedby="basic-addon2"
+                       [(ngModel)]="siteID" [ngModelOptions]="{standalone: true}">
+              </div>
+              <div class="form-group col-6">
+                <input id="payment_method_id" type="text" class="form-control" placeholder="Payment_method_id"
+                       aria-label="payment_method_id" aria-describedby="basic-addon2"
+                       [(ngModel)]="paymentMethodId" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-4">
+                <input id="lat" type="text" class="form-control"
+                       placeholder="Lat"
+                       aria-label="lat"
+                       aria-describedby="basic-addon2"
+                       [(ngModel)]="nearTo.lat" [ngModelOptions]="{standalone: true}">
+              </div>
+              <div class="form-group col-4">
+                <input id="lon" type="text" class="form-control"
+                       placeholder="Lon"
+                       aria-label="lon"
+                       aria-describedby="basic-addon2"
+                       [(ngModel)]="nearTo.lon" [ngModelOptions]="{standalone: true}">
+              </div>
+              <div class="form-group col-4">
+                <input id="radius" type="text" class="form-control"
+                       placeholder="Radius"
+                       aria-label="radius"
+                       aria-describedby="basic-addon2"
+                       [(ngModel)]="nearTo.radius" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-6">
+                <input id="limit" type="text" class="form-control"
+                       placeholder="Limit"
+                       aria-label="limit"
+                       aria-describedby="basic-addon2"
+                       [(ngModel)]="limit" [ngModelOptions]="{standalone: true}">
+              </div>
+              <div class="form-group col-6">
+                <input id="offset" type="text" class="form-control"
+                       placeholder="Offset"
+                       aria-label="offset"
+                       aria-describedby="basic-addon2"
+                       [(ngModel)]="offset" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+
+            <div class="form-row">
+
+              <div class="form-group col-6">
+                <label style="color: white" for="order_by">Order By</label>
+
+                <select id="order_by"class="form-control" [(ngModel)]="orderBy.type" [ngModelOptions]="{standalone: true}">
+                  <option value="" disabled></option>
+                  <option *ngFor="let type of types.list" [ngValue]="type">
+                    {{ type }}
+                  </option>
+                </select>
+              </div>
+              <div class="form-group col-6">
+                <label style="color: white" for="val">Value</label>
+                <select id="val" class="form-control" [(ngModel)]="orderBy.order" [ngModelOptions]="{standalone: true}">
+                  <option value="" disabled></option>
+                  <option *ngFor="let type of types.order" [ngValue]="type">
+                    {{ type }}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
+    </form>
     <div class="row d-flex justify-content-center">
       <div class="col-3">
         <button (click)="searchForItems()" class="btn gris border-0" type="button">
@@ -86,8 +108,9 @@
         </button>
       </div>
     </div>
-    <div class="row d-flex justify-content-center">
-      <button (click)="getAgencies()" type="button"  style="color: white !important;" class="btn btn-link">
+    <div class="row d-flex justify-content-center mt-5">
+      <button (click)="getAgencies()" type="button" style="background-color: rgba(0,0,0,.7);color: white !important;"
+              class="btn btn-link">
         Listar agencias recomendadas
       </button>
     </div>
