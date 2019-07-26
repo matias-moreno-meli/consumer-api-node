@@ -55,7 +55,7 @@
 
 .imagen-likes{
   size: 10px;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .imagen-likes:hover{
@@ -65,4 +65,9 @@
 .imagen-likes:active{
   size: 10px;
   background-color: #8d8f90;
+}
+
+.card-custom:hover{
+  background-color: rgba(141, 143, 144, 0.24);
+  border-radius: 10px;
 }
