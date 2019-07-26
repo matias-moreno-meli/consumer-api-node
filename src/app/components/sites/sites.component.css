@@ -52,3 +52,17 @@
   border-radius: 4px;
   margin: auto;
 }
+
+.imagen-likes{
+  size: 10px;
+  border-radius: 30px;
+}
+
+.imagen-likes:hover{
+  size: 10px;
+  background-color: #f1f3f4;
+}
+.imagen-likes:active{
+  size: 10px;
+  background-color: #8d8f90;
+}
